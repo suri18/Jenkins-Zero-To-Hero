@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/suri18/Jenkins-Zero-To-Hero/blob/main/hello-world/Jenkinsfile'
+                git 'https://github.com/suri18/Jenkins-Zero-To-Hero/main/hello-world/Jenkinsfile'
             }
         }
         stage('Build') {
