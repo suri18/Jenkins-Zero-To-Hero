@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/suri18/Jenkins-Zero-To-Hero/blob/main/hello-world/Jenkinsfile'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'javac HelloWorld.java'
+            }
+        }
+        stage('Run') {
+            steps {
+                sh 'java HelloWorld'
+            }
+        }
+    }
+}
