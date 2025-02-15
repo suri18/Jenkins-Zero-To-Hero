@@ -1,11 +1,5 @@
 pipeline {
     agent any
-    stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/suri18/Jenkins-Zero-To-Hero/main/hello-world/Jenkinsfile'
-            }
-        }
         stage('Build') {
             steps {
                 sh 'javac HelloWorld.java'
